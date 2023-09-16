@@ -1,8 +1,8 @@
 /*==== MENU SHOW Y HIDDEN ====*/
 
-const navMenu = document.getElementById("nav-menu");
-const toggleMenu = document.getElementById("nav-toggle");
-const closeMenu = document.getElementById("nav-close");
+let navMenu = document.getElementById("nav-menu");
+let toggleMenu = document.getElementById("nav-toggle");
+let closeMenu = document.getElementById("nav-close");
 
 // show
 toggleMenu.addEventListener("click", () => {
