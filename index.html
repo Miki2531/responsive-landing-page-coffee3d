@@ -1,114 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" , inital-scale="1.0" />
-  <! --===== BOX ICONS ===== -->
-  <link
-    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="assets/css/main.css" />
-
-  <title>Responsive landing page coffee 3D</title>
-
   <head>
-    <body>
-      <!--===== HEADER =====-->
-      <header class="l-header">
-        <nav class="nav bd-grid">
-          <div>
-            <a href="#" class="nav__logo">Coffee</a>
-          </div>
-        </nav>
-
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
-        </div>
-
-        <div class="nav__menu" id="nav-menu">
-          <div class="nav__close" id="nav__close">
-            <i class="bx bx-x"></i>
-          </div>
-
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#Blog" class="nav__link">Blog</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </header>
-
-      <main class="l-main">
-        <!--==== Home ====-->
-        <section class="home" id="home">
-          <div class="home__container bd-grid">
-            <div class="home__img">
-              <img
-                src="assests/img/img1.png"
-                alt=""
-                data-speed="-2"
-                class="move"
-              />
-              <img
-                src="assets/img/img2.png"
-                alt=""
-                data-speed="2"
-                class="move"
-              />
-              <img
-                src="assets/img/img3.png"
-                alt=""
-                data-speed="2"
-                class="move"
-              />
-              <img
-                src="assets/img/img4.png"
-                alt=""
-                data-speed="-2"
-                class="move"
-              />
-              <img
-                src="assets/img/img5.png"
-                alt=""
-                data-speed="-2"
-                class="move"
-              />
-              <img
-                src="assets/img/img6.png"
-                alt=""
-                data-speed="2"
-                class="move"
-              />
-            </div>
-
-            <div class="home__data">
-              <h1 class="home__title">
-                Coffee<br />
-                Drink 3D
-              </h1>
-              <p class="home__descriptions">
-                The best coffee drink house<br />Dukkamo coffee house.
-              </p>
-              <a href="#" class="home_button">Get started</a>
-            </div>
-          </div>
-        </section>
-      </main>
-      <!--===== GSAP =====-->
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-
-      <!--===== MAIN JS =====-->
-      <script src="assets/js/main.js"></script>
-    </body>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- custom css file -->
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
+  <body>
+    <!-- header section starts -->
+
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="assets/img/logo.png" alt="" />
+      </a>
+
+      <nav class="navbar">
+        <div id="close" class="fas fa-times"></div>
+
+        <a href="#" class="nav_item">home</a>
+        <a href="#" class="nav_item">about</a>
+        <a href="#" class="nav_item">menu</a>
+        <a href="#" class="nav_item">contact</a>
+      </nav>
+
+      <div id="menu" class="fas fa-bars"></div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home">
+      <div class="content">
+        <h1 class="title">
+          fresh <span>coffee</span> in the <span>morning</span>
+        </h1>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus.
+        </p>
+        <a href="#" class="btn">get started</a>
+      </div>
+
+      <div class="image">
+        <img src="assets/img/home.png" alt="" data-speed="-3" class="move" />
+      </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- GSAP CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- custom js file -->
+    <script src="assets/css/main.css"></script>
+  </body>
 </html>

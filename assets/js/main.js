@@ -1,43 +1,29 @@
-/*==== MENU SHOW Y HIDDEN ====*/
+let navbar = document.querySelector(".header .navbar");
 
-let navMenu = document.getElementById("nav-menu");
-let toggleMenu = document.getElementById("nav-toggle");
-let closeMenu = document.getElementById("nav-close");
+document.querySelector("#menu").onclick = () => {
+  navbar.classList.add("active");
+};
 
-// show
-toggleMenu.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
+document.querySelector("#close").onclick = () => {
+  navbar.classList.remove("active");
+};
 
-// hidden
+// mousemove home img
 
-closeMenu.addEventListener("click", () => {
-  navMenu.classList.remove("show");
-});
-
-/*==== MOUSEMOVE HOME IMG =====*/
 document.addEventListener("mousemove", move);
-
 function move(e) {
   this.querySelectorAll(".move").forEach((layer) => {
     const speed = layer.getAttribute("data-speed");
 
     const x = (window.innerWidth - e.pageX * speed) / 120;
-    const y = (window.innerHeight - e.pageY * speed) / 120;
+    const y = (window.innerWidth - e.pageY * speed) / 120;
 
     layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });
 }
 
-/*===== GSAP ANIMATION =====*/
-// NAV
-gsap.from(".nav__logo, .nav__toggle", {
-  opacity: 0,
-  duration: 1,
-  delay: 2,
-  y: 10,
-});
-gsap.from(".nav__item", {
+gsap.from(".logo", { opacity: 0, duration: 1, delay: 2, y: 10 });
+gsap.from(".navbar .nav_item", {
   opacity: 0,
   duration: 1,
   delay: 2.1,
@@ -45,8 +31,7 @@ gsap.from(".nav__item", {
   stagger: 0.2,
 });
 
-// HOME
-gsap.from(".home__title", { opacity: 0, duration: 1, delay: 1.6, y: 30 });
-gsap.from(".home__description", { opacity: 0, duration: 1, delay: 1.8, y: 30 });
-gsap.from(".home__button", { opacity: 0, duration: 1, delay: 2.1, y: 30 });
-gsap.from(".home__img", { opacity: 0, duration: 1, delay: 1.3, y: 30 });
+gsap.from(".title", { opacity: 0, duration: 1, delay: 1.6, y: 30 });
+gsap.from(".description", { opacity: 0, duration: 1, delay: 1.8, y: 30 });
+gsap.from(".btn", { opacity: 0, duration: 1, delay: 2.1, y: 30 });
+gsap.from(".image", { opacity: 0, duration: 1, delay: 2.6, y: 30 });
